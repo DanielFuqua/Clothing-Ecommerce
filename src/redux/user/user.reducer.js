@@ -8,6 +8,8 @@ A reducer is a function that gets two properties: (state, action)
         }
 */
 
+import { UserActionTypes } from "./user.types";
+
 //INITIAL_STATE will represent the initial state of this reducer
 const INITIAL_STATE = {
   currentUser: null,
@@ -15,7 +17,7 @@ const INITIAL_STATE = {
 
 const userReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "SET_CURRENT_USER":
+    case UserActionTypes.SET_CURRENT_USER:
       return {
         ...state,
         currentUser: action.payload,
