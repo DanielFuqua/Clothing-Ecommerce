@@ -5,7 +5,13 @@
 
   .title {
     font-size: 28px;
+    width: max-content;
     margin-bottom: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: slategray;
+    }
   }
 
   .preview {
