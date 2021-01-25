@@ -19,3 +19,14 @@ export const selectCollection = memoize((collectionUrlParam) =>
     collections ? collections[collectionUrlParam] : null
   )
 );
+
+export const selectIsCollectionsFetching = createSelector(
+  [selectShop],
+  (shop) => shop.isFetching
+);
+
+//The double bang evaluates to truthy or falsey. So if collections is loaded shop.collection will = true and vice versa...
+export const selectIsCollectionsLoaded = createSelector(
+  [selectShop],
+  (shop) => !!shop.collections
+);
