@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./collection.styles.scss";
-// import CollectionItem from "../../components/collection-item/collection-item.component";
 import { selectCollection } from "../../redux/shop/shop.selectors";
 import { connect } from "react-redux";
-import CollectionItem from "../../components//collection-item/collection-item.component";
+import CollectionItem from "../../components/collection-item/collection-item.component";
+import { firestore } from "../../firebase/firebase.utils";
 
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
